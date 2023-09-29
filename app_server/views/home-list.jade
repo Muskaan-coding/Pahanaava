@@ -7,23 +7,20 @@ block content
         br 
         br
         center
-          h4 Welcome to ᑭᗩᕼᗩᑎᗩᗩᐯᗩ 
-            p.text-body-tertiary.text-success &nbsp;Best fashion at low price!!
+          h4= pageHeader.title  
+            p.text-body-tertiary.text-success &nbsp;#{pageHeader.strapline}
             br
             br
   .row
     .col-xs-12.col-ms-8 
       .row.list-group 
         .col-xs-12.list-group-item
-          h6 Select your Style
+          h6=Heading2
           .d-grid.gap-2
-            a(href='/style1').button.btn.btn-lg.btn-primary(type='button',fdprocessedid='1w9c1') Western Style
-            a(href='/style2').button.btn.btn-lg.btn-primary(type='button',fdprocessedid='2wn5j') Indian Style
-            a(href='/style3').button.btn.btn-lg.btn-primary(type='button',fdprocessedid='2wn5j') Indo Western Style
-            a(href='/style4').button.btn.btn-lg.btn-primary(type='button',fdprocessedid='2wn5j') Casual Style
-            a(href='/style5').button.btn.btn-lg.btn-primary(type='button',fdprocessedid='2wn5j') Street Style
+            each category in categories
+              a(href=category.href).button.btn.btn-lg.btn-primary(type='button',fdprocessedid='1w9c1')=category.name
       br
       br
   .row
     .col-xs-12
-      p We search best fashion at low price from all fashion platforms
+      p=Heading3
