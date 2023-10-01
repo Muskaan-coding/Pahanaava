@@ -10,6 +10,6 @@ var contentSchema = new mongoose.Schema({
 var wholeSchema = new mongoose.Schema({
     title:String,
     content:[contentSchema]
-})
+});
 
-mongoose.model('Content', wholeSchema);
+mongoose.model('contents', wholeSchema);

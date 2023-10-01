@@ -1,3 +1,4 @@
+
 var mongoose = require('mongoose');
 var dbURI='mongodb://0.0.0.0:27017/MYAPP';
 mongoose.connect(dbURI);
